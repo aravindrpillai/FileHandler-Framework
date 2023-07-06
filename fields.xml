@@ -1,0 +1,24 @@
+<!-- ===============================================================================- ->
+<!   delimitor               : String   : A delimitor to seperate the values (This is NOT mandatory)
+<!   responsive (deflt: true): Boolean  : If responsive = true, the field size limit wil be ignored.
+<!                                        Field values can grow and shrink without any limitation
+<!                                        If False - Each field will be restricted with the fieldSize limit.
+<!                                        this includes the field value and the delimitor.
+
+<!   name*                   : String   : Field Name
+<!   fieldSize               : Integer  : Expected field size for this field (inc. padding).
+<!   trimValueIfExceedsSize* : Boolean  : If the value length exceeds the size
+<!                                        if set to true :- Framework will trim the value -> substring(value, size)
+<!                                        if set tp false:- An Exception will be raised
+<!   required*               : Boolean  : Specifies if the field is mandatory or not.
+<!                                        If marked as true and if the value is empty results in exception
+<!   justify                 : Enum     :  Allowed values are [left|center|right] and default Value is 'left'
+<!-  =============================================================================== -->
+<fields delimitor="" responsive="false">
+  <field name="Name"         fieldSize="15" trimValueIfExceedsSize="false" required="true"  justify="left"  />
+  <field name="Age"          fieldSize="5"  trimValueIfExceedsSize="false" required="true"  justify="right" />
+  <field name="Premium"      fieldSize="10" trimValueIfExceedsSize="false" required="true"  justify="right" />
+  <field name="AddressLine1" fieldSize="20" trimValueIfExceedsSize="false" required="true"  justify="left"  />
+  <field name="AddressLine2" fieldSize="20" trimValueIfExceedsSize="true"  required="false" justify="left"  />
+  <field name="PostalCode"   fieldSize="10" trimValueIfExceedsSize="false" required="true"  justify="left"  />
+</fields>
